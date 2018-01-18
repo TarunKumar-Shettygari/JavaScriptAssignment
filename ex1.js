@@ -1,8 +1,7 @@
-
+A();
 
 function C() {
-	console.log("C");
-	D();
+	console.log("OOPS!");
 }
 
 function E(f) {
@@ -11,37 +10,27 @@ function E(f) {
 	f();
 }
 
-var A = function() {
+function A() {
 	console.log("A");
 	B();
 };
 
 
-var C;
-
 function G() {
 	console.log("G");
-	var H = function() {
+	H();
+
+	function H() {
 		console.log("H");
 		I();
 	};
-	H();
 }
 
-var D = d;
 
-function d() {
+function D() {
 	console.log("D");
 	E();
 }
-
-var J = function() {
-	J = function() {
-		console.log("J");
-		K();
-		K();
-	};
-};
 
 function I() {
 	console.log("I");
@@ -49,17 +38,15 @@ function I() {
 	J();
 }
 
-B = function() {
+function B() {
 	console.log("B");
 	C();
 };
 
-var F = function() {
+function F() {
 	console.log("F");
 	G();
 };
-
-A();
 
 function K(){
 	var rest = "KLMNOPQRSTUVWXYZ".split("");
@@ -77,8 +64,15 @@ function K(){
 	}
 }
 
+function J() {
+	J = function() {
+		console.log("J");
+		K();
+		K();
+	};
+};
 
-C = function() {
+function C() {
 	console.log("C");
 	D();
 };
